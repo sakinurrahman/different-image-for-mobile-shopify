@@ -1,0 +1,55 @@
+ <div class="collections__header_photo">
+    
+     <img class="hide_on_mobile" src="{{ section.settings.cimg | img_url: '1900x' }}">
+   
+    <img class="hide_on_desktop" src="{{ section.settings.cimg2 | img_url: '800x' }}">
+    
+    </div>
+
+
+{% schema %}
+  {
+    "name": "Heading Photo",
+    "settings": [
+
+ {
+        "type": "image_picker",
+        "id": "cimg",
+        "label": "Collection Image for Desktop"
+        },
+ {
+        "type": "image_picker",
+        "id": "cimg2",
+        "label": "Collection Image for Mobile"
+        }
+]
+  }
+{% endschema %}
+
+
+
+<style>
+  
+   .hide_on_mobile {
+	display: block !important;
+   }
+  .hide_on_desktop {
+	display: none !important;
+   }
+  @media only screen and (max-width: 767px ) {
+  .hide_on_mobile {
+	display: none !important;
+   }
+    
+      .hide_on_desktop {
+	display: block !important;
+   }
+ #Hero-slideshow {
+	max-height: 100% !important;
+	min-height: inherit !important;
+	height: 100% !important;
+}
+  
+  } 
+  
+</style>
