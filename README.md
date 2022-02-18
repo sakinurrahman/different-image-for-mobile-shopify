@@ -1,0 +1,1 @@
+# different-image-for-mobile-shopify
